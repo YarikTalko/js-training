@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Sort</title>
+</head>
+<body>
+<p id="demo">-</p>
+<!--<p id="demo1">-</p>-->
+<!--<button onclick="myFunction1()">Клац!</button>-->
+<!--<button onclick="myFunction2()">Клац 2!</button>-->
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    const months = ["Jan", "Feb", "Mar", "Apr"];
+    const sortedMonths = months.toSorted();
+    const reversedMonths = months.toReversed();
+    const sortedReversedMoths = months.toSorted().toReversed();
+
+    const points = [40, 100, 1, 5, 25, 10];
+    points.sort(function (a, b) {
+        return a - b
+    });
+
+    // points.sort(function (a, b) {
+    //     return 0.5 - Math.random();
+    // });
+
+    // for (let i = points.length - 1; i > 0; i--) {
+    //     let j = Math.floor(Math.random() * (i + 1));
+    //     let k = points[i];
+    //     points[i] = points[j];
+    //     points[j] = k;
+    // }
+
+    const cars = [
+        {type: "Volvo", year: 2016},
+        {type: "Saab", year: 2001},
+        {type: "BMW", year: 2010}
+    ]
+
+    // cars.sort(function (a, b) {
+    //     return a.year - b.year
+    // });
+
+    cars.sort(function (a, b) {
+        let x = a.type.toLowerCase();
+        let y = b.type.toLowerCase();
+        if (x < y) {
+            return -1;
+        }
+        if (x > y) {
+            return 1;
+        }
+    })
+
+    const myArray = [
+        {name: "X00", price: 100},
+        {name: "X01", price: 100},
+        {name: "X02", price: 100},
+        {name: "X03", price: 100},
+        {name: "X04", price: 100},
+        {name: "X05", price: 110},
+        {name: "X06", price: 110},
+        {name: "X07", price: 110},
+        {name: "X08", price: 110},
+        {name: "X09", price: 110},
+        {name: "X10", price: 110},
+        {name: "X11", price: 110},
+        {name: "X12", price: 120},
+        {name: "X13", price: 120},
+        {name: "X14", price: 120},
+        {name: "X15", price: 120},
+        {name: "X16", price: 130},
+        {name: "X17", price: 130},
+        {name: "X18", price: 140},
+        {name: "X19", price: 140},
+    ];
+
+    myArray.sort( (p1, p2) => {
+        if (p1.price < p2.price) return -1;
+        if (p1.price > p2.price) return 1;
+    })
+
+    let txt = "";
+    myArray.forEach(output);
+
+    function output(value) {
+        txt += value.name + " " + value.price + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = txt;
+
+    // months + "<br>" + sortedMonths + "<br>" + reversedMonths + "<br>" + sortedReversedMoths;
+
+    function myFunction1() {
+        points.sort(function (a, b) {
+            return a - b
+        });
+        document.getElementById("demo1").innerHTML = points;
+    }
+
+    function myFunction2() {
+        document.getElementById("demo").innerHTML = points;
+    }
+
+    function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+    }
+
+    function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+    }
+
+    function homeMadeMin(arr) {
+        let len = arr.length;
+        let min = Infinity;
+        while (len--) {
+            if (arr[len] < min) {
+                min = arr[len];
+            }
+        }
+        return min;
+    }
+
+    function homeMadeMax(arr) {
+        let len = arr.length;
+        let max = -Infinity;
+        while (len--) {
+            if (arr[len] > max) {
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS String Search</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // let text = "Please locate where 'locate' occurs";
+    // let index = text.search(/locate/);
+    // let text = "The rain in SPAIN stays mainly in the plain."
+    // const myArray = text.match(/ain/gi);
+    // let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+    // const iterator = text.matchAll(/Cats/gi);
+    // let text = "Hello world, welcome to the universe.";
+    let text = "John Doe";
+
+    // document.getElementById("demo").innerHTML = index;
+    // document.getElementById("demo").innerHTML = myArray.length + " " + myArray;
+    // document.getElementById("demo").innerHTML = Array.from(iterator);
+    // document.getElementById("demo").innerHTML = text.includes("world", 12);
+    // document.getElementById("demo").innerHTML = text.startsWith("world", 6);
+    document.getElementById("demo").innerHTML = text.endsWith("John", 4);
+</script>
+</body>
+</html>

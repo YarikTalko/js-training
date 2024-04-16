@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arrow Function</title>
+</head>
+<body>
+<p id="demo"></p>
+<button id="btn">Клац</button>
+
+<script>
+    let myFunction = (a, b) => a * b;
+
+    // hello = function () {
+    //     return "Hello, World!";
+    // }
+
+    // hello = () => {
+    //     return "Hello, World!";
+    // }
+
+    // hello = () => "Hello, World!";
+
+    // hello = (val) => "Hello " + val;
+    // hello = val => "Hello " + val;
+
+    hello = () => {
+        document.getElementById("demo").innerHTML += this;
+    }
+
+    window.addEventListener("load", hello);
+
+    document.getElementById("btn").addEventListener("click", hello);
+
+    // document.getElementById("demo").innerHTML = hello("World");
+</script>
+</body>
+</html>

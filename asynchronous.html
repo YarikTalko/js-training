@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Asynchronous</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    function myDisplayer(something) {
+        outputText.innerHTML = something;
+    }
+
+    // function myCalculator(num1, num2, myCallback) {
+    //     myCallback(num1 + num2);
+    // }
+    //
+    // myCalculator(5, 5, myDisplayer);
+    //
+    // // setTimeout(myFunction, 3000);
+    // setTimeout(function () {
+    //     myFunction("I love you!")
+    // }, 3000);
+    //
+    // function myFunction(value) {
+    //     outputText.innerHTML = value;
+    // }
+
+    setInterval(myFunction, 1);
+
+    // function myFunction() {
+    //     let d = new Date();
+    //     document.getElementById("demo").innerHTML =
+    //         d.getHours() + ":" +
+    //         d.getMinutes() + ":" +
+    //         d.getSeconds();
+    // }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Methods</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const fruits = [
+        "Banana",
+        "Orange",
+        "Apple",
+        "Mango",
+        "Kiwi"//,
+        // "Papaya"
+    ];
+    // let size = fruits.length;
+    //
+    // let popedFruit = fruits.pop();
+    //
+    // let length = fruits.push("Kiwi");
+    //
+    // let shiftedFruit = fruits.shift();
+    //
+    // let unshiftedFruit = fruits.unshift("Lemon");
+
+    // fruits[0] = "Kiwi";
+
+    // fruits[fruits.length] = "Kiwi";
+
+    // delete fruits[0];
+
+    const arr1 = ["Cecilie", "Lone"];
+    const arr2 = ["Emil", "Tobias", "Linus"];
+    const arr3 = ["Robin", "Morgan"];
+
+    const myArr = [[1, 2], [3, 4], [5, 6]];
+
+    // fruits.splice(2, 2, "Lemon", "Kiwi")
+    // fruits.splice(0, 1);
+
+    const months = ["Jan", "Feb", "Mar", "Apr"];
+    const spliced = months.toSpliced(0, 1);
+
+    const citrus = fruits.slice(2);
+
+    document.getElementById("demo").innerHTML = fruits + "<br>" + citrus;
+</script>
+</body>
+</html>

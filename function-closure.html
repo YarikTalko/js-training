@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Function Closure</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // let a = 4;
+    // myFunction();
+    //
+    // function myFunction() {
+    //     a = 4;
+    //     document.getElementById("demo").innerHTML = a * a;
+    // }
+
+    const outputText = document.getElementById("demo");
+
+    // let counter = 0;
+
+    const add = (function () {
+        let counter = 0;
+        return function () {
+            counter++;
+            return counter;
+        }
+    })();
+
+    add();
+    add();
+    add();
+    add();
+
+    outputText.innerHTML = add();
+</script>
+</body>
+</html>

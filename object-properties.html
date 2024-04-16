@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Properties</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    textOutput = document.getElementById("demo");
+
+    // const person = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    //     age: 50,
+    //     eyeColor: "blue"
+    // }
+
+    // document.getElementById("demo").innerHTML = person.firstName + " is " +
+    //     person.age + " years old.";
+
+    // document.getElementById("demo").innerHTML = person["firstName"] + " is " +
+    //     person["age"] + " years old.";
+
+    // person.nationality = "Ukrainian";
+    //
+    // // delete person.age;
+    // delete person["age"];
+    //
+    // let text = "";
+    // for (let x in person) {
+    //     text += person[x] + " ";
+    // }
+
+    // myObj = {
+    //     name: "John",
+    //     age: 30,
+    //     cars: {
+    //         car1: "Ford",
+    //         car2: "Ferrari",
+    //         car3: "Fiat"
+    //     }
+    // }
+
+    // let p1 = "cars", p2 = "car3";
+
+    const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+            {name: "Ford", models: ["Fiesta", "Focus", "Mustang"]},
+            {name: "BMW", models: ["320", "X3", "X5"]},
+            {name: "Fiat", models: ["500", "Panda"]}
+        ]
+    }
+
+    let text = "";
+
+    for (let i in myObj.cars) {
+        text += "<h1>" + myObj.cars[i].name + "</h1>";
+        for (let j in myObj.cars[i].models) {
+            text += myObj.cars[i].models[j] + ", ";
+        }
+    }
+
+    textOutput.innerHTML = text;
+</script>
+</body>
+</html>

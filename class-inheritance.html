@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Class Inheritance</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    class Car {
+        constructor(brand) {
+            this._carName = brand;
+        }
+        get carName() {
+            return this._carName;
+        }
+        set carName(x) {
+            this._carName = x;
+        }
+        // present() {
+        //     return "I have a " + this.carName;
+        // }
+    }
+
+    // class Model extends Car {
+    //     constructor(brand, mod) {
+    //         super(brand);
+    //         this.model = mod;
+    //     }
+    //     show() {
+    //         return this.present() + ", it`s a " + this.model;
+    //     }
+    // }
+
+    // let myCar = new Model("Ford", "Mustang");
+
+    const myCar = new Car("Ford");
+    myCar.carName = "Volvo";
+
+    outputText.innerHTML = myCar.carName;
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Comparisons</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    let age = "21s";
+    let voteAble; // = (age < 18) ? "Too young" : "Old enough";
+
+    age = Number(age);
+    if (isNaN(age)) {
+        voteAble = "Input is not a number";
+    } else {
+        voteAble = (age < 18) ? "Too young" : "Old enough";
+    }
+
+    let name = null;
+    let text = "missing";
+    let result = name ?? text;
+
+    const car = {type:"Fiat", model:"500", color:"white"};
+
+    document.getElementById("demo").innerHTML = car?.name;
+</script>
+</body>
+</html>

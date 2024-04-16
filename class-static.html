@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Class Static</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    class Car {
+        constructor(name) {
+            this.name = name;
+        }
+
+        static hello(x) {
+            return "Hello " + x.name;
+        }
+    }
+
+    const myCar = new Car("Ford");
+
+    outputText.innerHTML = Car.hello(myCar);
+</script>
+</body>
+</html>

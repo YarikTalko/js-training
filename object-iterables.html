@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Iterables</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    // let text = "";
+    //
+    // for (const x of [1, 2, 3, 4, 5]) {
+    //     text += x + "<br>";
+    // }
+
+    // function myNumbers() {
+    //     let n = 0;
+    //     return {
+    //         next: function () {
+    //             n += 10;
+    //             return {value: n, done: false};
+    //         }
+    //     }
+    // }
+    //
+    // const n = myNumbers();
+    // n.next();
+    // n.next();
+    // n.next();
+
+    myNumbers = {};
+
+    myNumbers[Symbol.iterator] = function () {
+        let n = 0;
+        isDone = false;
+        return {
+            next() {
+                n += 10;
+                if (n === 100) {
+                    isDone = true;
+                }
+                return {value: n, done: isDone};
+            }
+        };
+    }
+
+    let iterator = myNumbers[Symbol.iterator]();
+
+    let text = "";
+    // for (const num of myNumbers) {
+    //     text += num + "<br>";
+    // }
+
+    while (true) {
+        const result = iterator.next();
+        if (result.done) break;
+        text += result.value + "<br>";
+    }
+
+    outputText.innerHTML = text;
+</script>
+</body>
+</html>

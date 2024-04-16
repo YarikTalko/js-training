@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Type Conversion</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const strToNum = [
+        "3.14",
+        Math.PI,
+        " ",
+        "",
+        "99 88",
+        "John"
+    ];
+
+    let x = 123;
+
+    const numToStr = [
+        x,
+        123,
+        100 + 23
+    ];
+
+    d = new Date();
+
+    const autoTypeConversion = [
+        5 + null,
+        "5" + null,
+        "5" + 2,
+        "5" - 2,
+        "5" * "2",
+        {name: "John"},
+        [1, 2, 3, 4],
+        new Date(),
+        123,
+        true,
+        false
+    ];
+
+    // let y = "5";
+    // let y = "John";
+    // let x = + y;
+
+    let text = "";
+
+    // strToNum.forEach(function (value) {
+    //     text += Number(value) + "<br>";
+    // })
+
+    // numToStr.forEach(function (value) {
+    //     text += String(value) + " " + value.toString() + "<br>";
+    // })
+
+    // text += Number(d) + " " + d.getTime();
+
+    // text += String(Date()) + " " + Date().toString();
+
+    // text += Number(false) + " " + Number(true);
+
+    // text += String(false) + " " + String(true);
+
+    // text += false.toString() + " " + true.toString();
+
+    autoTypeConversion.forEach(function (value) {
+        text += value + "<br>";
+    })
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

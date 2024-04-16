@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Scope</title>
+</head>
+<body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    document.getElementById("demo1").innerHTML = typeof carName;
+
+    // myFunction();
+
+    let carName = "Volvo";
+
+    function myFunction() {
+        carName = "Volvo";
+    }
+    document.getElementById("demo2").innerHTML = window.carName;
+</script>
+</body>
+</html>

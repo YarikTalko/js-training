@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This Keyword</title>
+</head>
+<body>
+<p id="demo"></p>
+<!--<button onclick="this.style.display='none'">-->
+<!--    Click to Remove-->
+<!--</button>-->
+
+<script>
+    // const person = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    //     id: 5566,
+    //     myFunction: function () {
+    //         return this;
+    //     },
+    //     fullName: function () {
+    //         return this.firstName + " " + this.lastName;
+    //     }
+    //     // fullName: function () {
+    //     //     return firstName + " " + lastName;
+    //     // }
+    // };
+
+    // "use strict";
+    //
+    // // let x = this;
+    //
+    //
+    //
+    // document.getElementById("demo").innerHTML = myFunction();
+    //
+    // function myFunction() {
+    //     return this;
+    // }
+
+    // "use strict";
+
+    // const person1 = {
+    //     fullName: function () {
+    //         return this.firstName + " " + this.lastName;
+    //     }
+    // };
+    // //
+    // const person2 = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    // }
+    // //
+    // let x = person1.fullName.call(person2);
+    //
+    // // function myFunction() {
+    // //     return this;
+    // // }
+
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    const member = {
+        firstName: "Hege",
+        lastName: "Nilsen"
+    }
+
+    let fullName = person.fullName.bind(member);
+    document.getElementById("demo").innerHTML = fullName();
+</script>
+</body>
+</html>

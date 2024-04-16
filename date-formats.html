@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Date Formats</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // const d = new Date("25, JANUARY, 2015");
+    let msec = Date.parse("March 21, 2012");
+    const d = new Date(msec);
+
+    document.getElementById("demo").innerHTML = d;
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Dates</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const d = new Date();
+    // const d = new Date("2022-03-25");
+    // const d = new Date("October 13, 2014 11:13:00");
+    // const d = new Date(99, 11, 24);
+    // const d = new Date(0);
+
+    document.getElementById("demo").innerHTML = d.toISOString();
+</script>
+</body>
+</html>

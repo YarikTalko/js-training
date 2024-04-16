@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Display</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    outputText = document.getElementById("demo");
+
+    const person = {
+        name: "John",
+        age: function () {return 30;},
+        city: "New York",
+        today: new Date()
+    };
+
+    // let text = ""
+    // for (let i in person) {
+    //     text += person[i] + " ";
+    // }
+
+    // const myArray = Object.values(person);
+    person.age = person.age.toString();
+
+    const arr = ["John", "Peter", "Sally", "Jane"];
+
+    // outputText.innerHTML = person.name + " " + person.age + " " + person.city;
+    // outputText.innerHTML = text;
+    outputText.innerHTML = JSON.stringify(arr);
+</script>
+</body>
+</html>

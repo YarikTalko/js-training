@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Events</title>
+</head>
+<body>
+<button onclick="displayDate()">Дата та час?</button>
+<!--<button onclick="this.innerHTML = Date()">Дата та час?</button>-->
+
+<script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+<p id="demo"></p>
+</body>
+</html>

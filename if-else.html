@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS If Else</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    let date = new Date();
+    let greeting
+    date.setHours(11);
+    let hour = date.getHours();
+
+    if (hour < 12) {
+        greeting = "Good morning!";
+    } else if (hour < 18) {
+        greeting = "Good day!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    document.getElementById("demo").innerHTML = greeting;
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Strings</title>
+</head>
+<body>
+<h1>strings</h1>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<!--<p id="demo5"></p>-->
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+
+<script>
+    let text1 = "Ось різні лапки: '', " + '""';
+    let text2 =
+        `Я на гору круту, крем'яную
+        Буду камінь важкий підіймать
+        І, несучи вагу ту важкую,
+        Буду пісню веселу співать.`;
+    let x = "John";
+    let y = new String("John");
+    document.getElementById("demo").innerHTML = text1;
+    document.getElementById("demo1").innerHTML = `Тут теж різні лапки: '', ""`
+    document.getElementById("demo2").innerHTML = "Довжина першого рядка = " + text1.length;
+    document.getElementById("demo3").innerHTML = "Подвійні лапки \"всередині\" подвійних лапок";
+    document.getElementById("demo4").innerHTML = "А ось тут звортній \\ слеш";
+    // document.getElementById("demo5").innerHTML = "Тестовий\v рядок";
+    document.getElementById("demo6").innerHTML = text2;
+    document.getElementById("demo7").innerHTML = typeof (x) + " " + typeof (y);
+    document.getElementById("demo8").innerHTML = (x == y) + " " + (x === y);
+</script>
+</body>
+</html>

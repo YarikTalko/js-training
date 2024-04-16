@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Switch</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    let date = new Date();
+    // let day = date.getDay()
+    let saveDay;
+    let text;
+
+    // switch (day) {
+    //     case 0:
+    //         saveDay = "Sunday";
+    //         break;
+    //     case 1:
+    //         saveDay = "Monday";
+    //         break;
+    //     case 2:
+    //         saveDay = "Tuesday";
+    //         break;
+    //     case 3:
+    //         saveDay = "Wednesday";
+    //         break;
+    //     case 4:
+    //         saveDay = "Thursday";
+    //         break;
+    //     case 5:
+    //         saveDay = "Friday";
+    //         break;
+    //     case 6:
+    //         saveDay = "Saturday";
+    //         break;
+    //     default:
+    //         saveDay = "undefined day";
+    // }
+
+    // switch (6) {
+    //     case 4:
+    //     case 5:
+    //         text = "Soon it is Weekend";
+    //         break;
+    //     case 0:
+    //     case 6:
+    //         text = "It is Weekend";
+    //         break;
+    //     default:
+    //         text = "Looking forward to the Weekend";
+    //         break;
+    // }
+
+    switch ("0") {
+        case 0:
+            text = "0";
+            break;
+        case 1:
+            text = "1";
+            break;
+        default:
+            text = "undefined";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

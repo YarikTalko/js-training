@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Function Invocation</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    // function myFunction(a, b) {
+    //     return this;
+    // }
+    //
+    // const myObject = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    //     fullName: function () {
+    //         return this;
+    //     }
+    // }
+
+    function myFunction(arg1, arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+    }
+
+    const myObject = new myFunction("John", "Doe");
+
+    outputText.innerHTML = myObject.firstName + " " + myObject.lastName;
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Number Methods</title>
+</head>
+<body>
+<p id="demo"></p>
+<!--<p id="demo1"></p>-->
+<!--<p id="demo2"></p>-->
+
+<script>
+    // let x = 123;
+
+    // document.getElementById("demo").innerHTML = x.toString();
+    // document.getElementById("demo1").innerHTML = (123).toString();
+    // document.getElementById("demo2").innerHTML = (100 + 23).toString();
+
+    // let x = 9.656;
+
+    // document.getElementById("demo").innerHTML =
+    //     x.toExponential() + "<br>" +
+    //     x.toExponential(2) + "<br>" +
+    //     x.toExponential(4) + "<br>" +
+    //     x.toExponential(6);
+
+    // let x = 9.656;
+    //
+    // document.getElementById("demo").innerHTML =
+    //     x.toFixed(0) + "<br>" +
+    //     x.toFixed(2) + "<br>" +
+    //     x.toFixed(4) + "<br>" +
+    //     x.toFixed(6);
+
+    // let x = 91.656;
+    //
+    // document.getElementById("demo").innerHTML =
+    //     x.toPrecision() + "<br>" +
+    //     x.toPrecision(2) + "<br>" +
+    //     x.toPrecision(4) + "<br>" +
+    //     x.toPrecision(6);
+
+    // let x = 123;
+    //
+    // document.getElementById("demo").innerHTML =
+    //     x.valueOf() + "<br>" +
+    //     (123).valueOf() + "<br>" +
+    //     (100 + 23).valueOf();
+
+    // document.getElementById("demo").innerHTML =
+    //     Number(true) + "<br>" +
+    //     Number(false) + "<br>" +
+    //     Number("10") + "<br>" +
+    //     Number("  10") + "<br>" +
+    //     Number("10  ") + "<br>" +
+    //     Number(" 10  ") + "<br>" +
+    //     Number("10.33") + "<br>" +
+    //     Number("10 33") + "<br>" +
+    //     Number("John") + "<br>" +
+    //     Number(new Date("2024-02-02"));
+
+    // document.getElementById("demo").innerHTML =
+    //     parseInt("-10") + "<br>" +
+    //     parseInt("-10.33") + "<br>" +
+    //     parseInt("10") + "<br>" +
+    //     parseInt("10.33") + "<br>" +
+    //     parseInt("10 20 30") + "<br>" +
+    //     parseInt("10 years") + "<br>" +
+    //     parseInt("years 10");
+
+    // document.getElementById("demo").innerHTML =
+    //     parseFloat("-10") + "<br>" +
+    //     parseFloat("-10.33") + "<br>" +
+    //     parseFloat("10") + "<br>" +
+    //     parseFloat("10.33") + "<br>" +
+    //     parseFloat("10 20 30") + "<br>" +
+    //     parseFloat("10 years") + "<br>" +
+    //     parseFloat("years 10");
+
+    document.getElementById("demo").innerHTML =
+        Number.isInteger(10) + "<br>" +
+        Number.isInteger(10.5) + "<br>" +
+        Number.isSafeInteger(10) + "<br>" +
+        Number.isSafeInteger(12345678901234567890) + "<br>" +
+        "--------------------" + "<br>" +
+        Number.parseFloat("10") + "<br>" +
+        Number.parseFloat("10.33") + "<br>" +
+        Number.parseFloat("10 20 30") + "<br>" +
+        Number.parseFloat("10 years") + "<br>" +
+        Number.parseFloat("years 10") + "<br>" +
+        "--------------------" + "<br>" +
+        Number.parseInt("-10") + "<br>" +
+        Number.parseInt("-10.33") + "<br>" +
+        Number.parseInt("10") + "<br>" +
+        Number.parseInt("10.33") + "<br>" +
+        Number.parseInt("10 20 30") + "<br>" +
+        Number.parseInt("10 years") + "<br>" +
+        Number.parseInt("years 10");
+</script>
+</body>
+</html>

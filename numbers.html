@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Numbers</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // let x = 999999999999999;
+    // let y = 9999999999999999;
+    // let x = 0.2 + 0.1;
+    // x = (0.2 * 10 + 0.1 * 10) / 10;
+    // let x = NaN;
+    // let y = "10";
+    // let z = x + "10";
+    // let a = isNaN(z);
+
+    // let myNumber = 2;
+    // let txt = "";
+    // while (myNumber != Infinity) {
+    //     myNumber *= myNumber;
+    //     txt += myNumber + "<br>";
+    // }
+
+    let x = 32;
+    txt =
+        x.toString(36) + "<br>" +
+        x.toString(32) + "<br>" +
+        x.toString(16) + "<br>" +
+        x.toString(12) + "<br>" +
+        x.toString(10) + "<br>" +
+        x.toString(8) + "<br>" +
+        x.toString(2) + "<br>";
+
+
+    document.getElementById("demo").innerHTML = txt;
+</script>
+</body>
+</html>

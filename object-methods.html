@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Methods</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    outputText = document.getElementById("demo");
+
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566
+    }
+
+    person.fullName = function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+    }
+
+    outputText.innerHTML = person.fullName();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Function Call, Apply, Bind</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // const outputText = document.getElementById("demo");
+
+    // const person = {
+    //     fullName: function (city, country) {
+    //         return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+    //     }
+    // };
+    //
+    // const person1 = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    // };
+    //
+    // const person2 = {
+    //     firstName: "Mary",
+    //     lastName: "Doe",
+    // };
+
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+            // return this.firstName + " " + this.lastName;
+            let x = document.getElementById("demo");
+            x.innerHTML = this.firstName + " " + this.lastName
+        }
+    };
+
+    const member = {
+        firstName: "Hege",
+        lastName: "Nelson"
+    };
+
+    // person.display();
+
+    // setTimeout(person.display, 3000)
+    setTimeout(person.display.bind(person), 3000);
+
+    // outputText.innerHTML = person.fullName.call(person2, "Oslo", "Norway");
+    // outputText.innerHTML = person.fullName.bind(member)();
+</script>
+</body>
+</html>

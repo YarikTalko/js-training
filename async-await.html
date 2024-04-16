@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Async/Await</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    // async function myDisplay() {
+    //     let myPromise = new Promise(function (resolve) {
+    //         setTimeout(function () {
+    //             resolve("I love You!!");
+    //         }, 3000);
+    //     });
+    //     document.getElementById("demo").innerHTML = await myPromise;
+    //     // return "Hello";
+    // }
+
+    // myDisplay();
+
+    // myFunction().then(
+    //     function (value) {
+    //         myDisplayer(value);
+    //     }//,
+    //     // function (error) {
+    //     //     myDisplayer(error);
+    //     // }
+    // );
+    //
+    // function myDisplayer(some) {
+    //     outputText.innerHTML = some;
+    // }
+
+    async function getFile() {
+        let myPromise = new Promise(function (resolve) {
+            let req = new XMLHttpRequest();
+            req.open("GET", "strings.html");
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response);
+                } else {
+                    resolve("File not found!");
+                }
+            }
+            req.send();
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+    }
+
+    getFile();
+</script>
+</body>
+</html>

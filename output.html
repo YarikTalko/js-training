@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Output</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+<p>5 + 6 = </p>
+<script>
+    document.write(5 + 6);
+</script>
+<br><br>
+
+<button onclick="document.write(5 + 6)">5 + 6 =</button>
+<br><br>
+
+<button onclick="alertFunction()">5 + 6 = ???</button>
+<br><br>
+
+<button onclick="window.print()">Print this page!</button>
+
+<script>
+    function alertFunction() {
+        alert(5 + 6);
+    }
+</script>
+
+<script>
+    console.log(5 + 6);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Hoisting</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // x = 5;
+    //
+    // elem = document.getElementById("demo");
+    // elem.innerHTML = x;
+    //
+    // var x;
+
+    // var x;
+    // x = 5;
+    //
+    // elem = document.getElementById("demo");
+    // elem.innerHTML = x;
+
+    var x =5;
+    var y;
+
+    elem = document.getElementById("demo");
+    elem.innerHTML = x + " " + y;
+
+    var y =7;
+
+</script>
+</body>
+</html>

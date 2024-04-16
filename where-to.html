@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Where To</title>
+
+    <script>
+        function myFunction() {
+            document.getElementById('demo1').innerHTML = "Параґраф змінено!";
+        }
+    </script>
+
+<!--    <script src="https://www.w3schools.com/js/myScript.js"></script>-->
+</head>
+<body>
+<p id="demo"></p>
+
+<p id="demo1">Параґраф</p>
+
+<button onclick="myFunction()">Клацни!</button>
+
+<p id="demo2">Параґраф, але інший.</p>
+
+<button onclick="myFunction1()">Тут клацни!</button>
+
+<p id="demo3">Тут зміна ззовні!</p>
+
+<button onclick="myFunction2()">Клац-клац-клац!</button>
+
+<script>
+    document.getElementById('demo').innerHTML = 'My First JavaScript';
+
+    function myFunction1() {
+        document.getElementById('demo2').innerHTML = "Тут теж змінено!";
+    }
+</script>
+<script src="myScript.js"></script>
+</body>
+</html>

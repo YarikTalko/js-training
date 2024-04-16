@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Const</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const cars = ["Saab", "Volvo", "BMW"];
+    // var cars = ["Saab", "Volvo", "BMW"];
+
+    cars[0] = "Toyota";
+    cars.push("Audi");
+
+    {
+        const cars = ["Saab", "Volvo", "BMW"];
+    }
+    {
+        const cars = ["Saab", "Volvo", "BMW"];
+    }
+
+    // var cars1 = ["Saab", "Volvo", "BMW"];
+    // var cars1 = ["Toyota", "Volvo"];
+    // cars1 = ["Volvo", "Saab"];
+
+    document.getElementById("demo").innerHTML = cars1;
+</script>
+</body>
+</html>

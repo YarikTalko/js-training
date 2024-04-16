@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Sets</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    // const letters = new Set(["a", "b", "c", "d"]);
+
+    const a = "a";
+    const b = "b";
+    const c = "c";
+
+    const letters = new Set();
+
+    letters.add(a);
+    letters.add(b);
+    letters.add(c);
+    letters.add("d");
+    letters.add("d");
+    letters.add("d");
+    letters.add("d");
+    letters.add("e");
+
+    let text = "";
+
+    // letters.forEach(function (value) {
+    //     text += value;
+    // })
+
+    for (const x of letters.entries()) {
+        text += x + "<br>";
+    }
+
+    outputText.innerHTML = letters instanceof Set;
+</script>
+</body>
+</html>

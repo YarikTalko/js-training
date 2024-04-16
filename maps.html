@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Maps</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // const fruits = new Map([
+    //     ["apples", 500],
+    //     ["bananas", 300],
+    //     ["oranges", 200]
+    // ]);
+
+    const fruits = new Map();
+
+    fruits.set("apples", 500);
+    fruits.set("bananas", 300);
+    fruits.set("oranges", 200);
+
+    fruits.set("apples", 400);
+
+    // fruits.delete("apples")
+
+    let text = "";
+    // fruits.forEach(function (value, key) {
+    //     text += key + " = " + value + "<br>";
+    // });
+
+    for (const x of fruits.entries()) {
+        text += x + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Prototypes</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const outputText = document.getElementById("demo");
+
+    function Person(first, last, age, eyeColor) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyeColor;
+    }
+
+    Person.prototype.nationality = "English";
+
+    Person.prototype.name = function (name) {
+        return this.firstName + " " + this.lastName;
+    };
+
+    const myFather = new Person("John", "Doe", 50, "blue");
+
+    outputText.innerHTML = "My father`s name is " + myFather.name();
+</script>
+</body>
+</html>

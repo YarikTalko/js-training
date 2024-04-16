@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Search</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const fruits = ["Apple", "Orange", "Apple", "Mango"];
+    // let position = fruits.includes("Mango");
+    const numbers = [4, 9, 16, 25, 36];
+    let first = numbers.findIndex(myFunction);
+
+    const temp = [27, 28, 30, 40, 42, 35, 30];
+    let high = temp.findLastIndex(x => x > 40);
+
+    document.getElementById("demo").innerHTML = high;
+
+    function myFunction(value, index, array) {
+        return value > 18;
+    }
+</script>
+</body>
+</html>

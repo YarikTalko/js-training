@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Maps</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    outputText = document.getElementById("demo");
+
+    // const fruits = new Map([
+    //     ["apples", 500],
+    //     ["bananas", 300],
+    //     ["oranges", 200],
+    // ]);
+
+    const apples = {name: "Apples"};
+    const bananas = {name: "Bananas"};
+    const oranges = {name: "Oranges"};
+
+    const fruits = new Map();
+
+    fruits.set(apples, 500);
+    fruits.set(bananas, 300);
+    fruits.set(oranges, 200);
+
+    // fruits.set("apples", 200);
+
+    // fruits.delete("apples");
+
+    // fruits.clear();
+
+    let text = "";
+    let total = 0;
+    // fruits.forEach(function (value, key) {
+    //     text += key + " = " + value + "<br>";
+    // })
+
+    for (const x of fruits.values()) {
+        total += x;
+    }
+
+    outputText.innerHTML = fruits.get("apples");
+</script>
+</body>
+</html>

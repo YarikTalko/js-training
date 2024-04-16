@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<p id="demo1"></p>
+
+<script>
+    const car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+    };
+
+    document.getElementById("demo").innerHTML = "Тип автівки: " + car["type"];
+
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    document.getElementById("demo1").innerHTML = "Повне ім'я: " + person.fullName();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Regular Expressions</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // let text = `Visit "It Is Home"`;
+    // let text = "10, 100 or 1000";
+    // let n = text.search(/home/i);
+    // let result = text.replace(/home/i, "W3Schools");
+    // let result = text.match(/is/g);
+    // let result = text.match(/^is/igm);
+    // let result = text.match(/10?/gi);
+
+    const pattern = /e/;
+    let boolean = pattern.exec("The best things in life are free!")
+
+    document.getElementById("demo").innerHTML = boolean;
+</script>
+</body>
+</html>

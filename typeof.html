@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Typeof</title>
+</head>
+<body>
+<p id="demo"></p>
+<p>
+    <a href="javascript:void(0)">ffffffffffff</a>
+</p>
+<p>
+    <a href="javascript:void(document.body.style.backgroundColor='red')">red</a>
+</p>
+
+<script>
+    const myArr = [
+        "John".constructor,
+        3.14.constructor,
+        // NaN,
+        false.constructor,
+        [1, 2, 3, 4].constructor,
+        {name:"John", age:34}.constructor,
+        new Date    (),
+        function () {}.constructor,
+        // null
+    ];
+
+    let text = "";
+    // myArr.forEach(function (value) {
+    //     text += typeof value + "<br>";
+    // })
+
+    // text += typeof myCar.constructor;
+
+    // let car = "";
+
+    // text += car + "<br>";
+
+    // car = undefined;
+
+    // text += typeof car;
+
+    let person = {name: "John", age: 50};
+    text += typeof person + " ";
+    person = undefined;
+    text += typeof person;
+
+    document.getElementById("demo").innerHTML =
+        (myArr instanceof Array) + " " +
+        (myArr instanceof Object) + " " +
+        (myArr instanceof String) + " " +
+        (myArr instanceof Number);
+
+    function isArray(myArray) {
+        // return myArray.constructor.toString().indexOf("Array") > -1;
+        return myArray.constructor === Array;
+    }
+
+    function isDate(myDate) {
+        // return myDate.constructor.toString().indexOf("Date") > -1;
+        return myDate.constructor === Date;
+    }
+</script>
+</body>
+</html>

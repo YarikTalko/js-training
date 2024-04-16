@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Const</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const pi = 3.14159;
+    // pi = 3.14;
+    // pi = pi + 3.14;
+    // const pi;
+
+    const cars = ["Saab", "Volvo", "BMW"];
+    // cars = ["Saab", "Volvo", "BMW"];
+
+    cars[0] = "Toyota";
+
+    cars.push("Audi");
+
+    const car = {type: "Fiat", model: "500", color: "white"};
+    // car = {type: "Fiat", model: "500", color: "white"};
+    car.color = "red";
+    car.owner = "Johnson";
+
+    // var x = 3;
+    const x = 2;
+
+    {
+        const pi = 3.14;
+    }
+
+    document.getElementById("demo").innerHTML = cars;
+    document.getElementById("demo").innerHTML = car.owner;
+</script>
+</body>
+</html>
