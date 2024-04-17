@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Form</title>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x === "") {
+                alert("Name must be filled out.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--<form name="myForm" onsubmit="return validateForm()" method="post">-->
+<!--    Name: <input type="text" name="fname">-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->
+<form name="myForm1">
+    <input type="number" id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+</form>
+<form>
+    <input type="text" name="fname" required>
+    <input type="submit" value="Submit">
+</form>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        let x = document.getElementById("numb").value;
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input is not valid";
+        } else {
+            text = "Input Ok";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+</body>
+</html>
