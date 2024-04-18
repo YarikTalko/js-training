@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Event Listener</title>
+</head>
+<body id="body">
+<p id="demo">Текст</p>
+<button id="btn" onclick="removeHandler()">Клац</button>
+
+<div id="myDiv">
+    <p id="myP">Клац!</p>
+</div>
+
+<script>
+    // document.getElementById("body").addEventListener("click", );
+    // document.getElementById("btn").addEventListener("click", function () {
+    //     alert("Hello World");
+    // });
+
+    // function displayDate() {
+    //     document.getElementById("demo").innerHTML = Date();
+    // }
+
+    // const x = document.getElementById("btn");
+    // x.addEventListener("click", firstFunc);
+    // x.addEventListener("mouseover", secondFunc);
+    //
+    // function firstFunc() {
+    //     alert("First");
+    // }
+    //
+    // function secondFunc() {
+    //     alert("Second");
+    // }
+
+    // window.addEventListener("resize", function () {
+    //     document.getElementById("demo").innerHTML = "Текст!!!";
+    // });
+    //
+    // document.getElementById("btn").addEventListener("click", function () { myFunc(5, 7); })
+    //
+    // function myFunc(a, b) {
+    //     document.getElementById("demo").innerHTML = (a * b).toString();
+    // }
+
+    // document.getElementById("myP").addEventListener("click", function () {
+    //     alert("White");
+    // }, false);
+    // document.getElementById("myDiv").addEventListener("click", function () {
+    //     alert("Orange");
+    // }, false);
+
+    document.getElementById("myDiv").addEventListener("mousemove", myFunc);
+
+    function removeHandler() {
+        document.getElementById("myDiv").removeEventListener("mousemove", myFunc)
+    }
+
+    function myFunc() {
+        document.getElementById("demo").innerHTML = Math.random().toString();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Events</title>
+</head>
+<body onload="checkCookies()">
+<p style="border: 1px solid red; padding: 10px;" id="demo"
+   onmouseover="onMove()" onmouseout="onLeave()">Клац!</p>
+<!--<button id="btn" onclick="displayDate()">Клац!</button>-->
+<input type="text" id="fname" oninput="upperCase()">
+<p style="border: 1px solid red; padding: 10px;" onmousedown="onMouseDown(this)"
+   onmouseup="onMouseUp(this)">0</p>
+
+<script>
+    function displayDate() {
+        document.getElementById("btn").innerHTML = Date();
+    }
+
+    function changeText(id) {
+        // id.innerHTML = "Oops!";
+    }
+
+    function checkCookies() {
+        let text = "";
+        if (navigator.cookieEnabled === true) {
+            text = "Cookies are enabled.";
+        } else {
+            text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+    function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+
+    function onMove() {
+        document.getElementById("demo").innerHTML = "Change!";
+    }
+
+    function onLeave() {
+        document.getElementById("demo").innerHTML = "Клац!";
+    }
+
+    function onMouseDown(obj) {
+        obj.innerHTML = "1";
+    }
+
+    function onMouseUp(obj) {
+        obj.innerHTML = "2";
+    }
+</script>
+</body>
+</html>
