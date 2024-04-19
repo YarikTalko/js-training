@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS BOM</title>
+</head>
+<body>
+<p id="demo">1</p>
+<!--<button onclick="myVar = setTimeout(myFunc, 3000)">Клац</button>-->
+<button onclick="clearTimeout(myVar)">Стоп</button>
+
+<!--<input type="button" value="Load new doc" onclick="newDoc()">-->
+<!--<input type="button" value="Back" onclick="goBack()">-->
+<!--<input type="button" value="Forward" onclick="goForward()">-->
+<script>
+    // document.getElementById("demo").innerHTML =
+    //     "width: " + screen.availWidth + "<br>" +
+    //     "height: " + screen.availHeight + "<br>" +
+    //     "color depth: " + screen.colorDepth + "<br>" +
+    //     "pixel depth: " + screen.pixelDepth + "<br>";
+    // window.open();
+    // document.getElementById("demo").innerHTML =
+    //     "location is " + location.href + "<br>" +
+    //     "hostname is " + location.hostname + "<br>" +
+    //     "pathname is " + location.pathname + "<br>" +
+    //     "protocol is " + location.protocol + "<br>" +
+    //     "port is " + location.port + "<br>";
+    //
+    // function newDoc() {
+    //     location.assign("http://localhost:63342/js%20training/where-to.html?_ijt=fra9ctakps8iqj8mdu3rs3vft8&_ij_reload=RELOAD_ON_SAVE");
+    // }
+    // function goBack() {
+    //     history.back();
+    // }
+    //
+    // function goForward() {
+    //     history.forward();
+    // }
+
+    // document.getElementById("demo").innerHTML =
+    //     "cookiesEnabled " + navigator.cookieEnabled + "<br>" +
+    //     "appName " + navigator.appName + "<br>" +
+    //     "appCodeName " + navigator.appCodeName + "<br>" +
+    //     "product " + navigator.product + "<br>" +
+    //     "appVersion " + navigator.appVersion + "<br>" +
+    //     "userAgent " + navigator.userAgent + "<br>" +
+    //     "platform " + navigator.platform + "<br>" +
+    //     "language " + navigator.language + "<br>" +
+    //     "onLine " + navigator.onLine + "<br>" +
+    //     "javaEnabled " + navigator.javaEnabled() + "<br>";
+
+    // function myFunc() {
+    //     let text;
+    //     if (confirm("Press a button!")) {
+    //         text = "Ok";
+    //     } else {
+    //         text = "Not Ok";
+    //     }
+    //     document.getElementById("demo").innerHTML = text;
+    // }
+    // alert("I am an alert box!");
+
+    // function myFunc() {
+    //     let text;
+    //     let person = prompt("Please,\n enter your name: ", "Harry Potter");
+    //     if (person === null || person === "") {
+    //         text = "User cancelled the prompt";
+    //     } else {
+    //         text = "Hello " + person;
+    //     }
+    //     document.getElementById("demo").innerHTML = text;
+    // }
+
+    function myFunc() {
+        alert("Hello");
+    }
+
+    let myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+</script>
+</body>
+</html>
