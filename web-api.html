@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Web Apis</title>
+</head>
+<body>
+<button onclick="getLocation()">Клац</button>
+<!--<p id="demo">Кількіть:-->
+<!--    <output id="result"></output>-->
+<!--</p>-->
+<!--<input id="id1" type="number" min="100" max="300" required>-->
+<!--<button onclick="myFunction()">OK</button>-->
+<!--<button onclick="startWorker()">Старт</button>-->
+<!--<button onclick="stopWorker()">Стоп</button>-->
+<!--<p id="demo"></p>-->
+<p id="mapholder"></p>
+<script>
+    const myElement = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            myElement.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        // myElement.innerHTML = "Latitude: " + position.coords.latitude +
+        //     "<br>Longitude: " + position.coords.longitude;
+        let latlon = position.coords.latitude + "," + position.coords.longitude;
+
+        let img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" +
+            latlon + "&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+        document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                myElement.innerHTML = "User denied the request for Geolocation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                myElement.innerHTML = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                myElement.innerHTML = "The request to get user location timed out.";
+                break;
+            case error.UNKNOWN_ERR:
+                myElement.innerHTML = "An unknown error occurred.";
+                break;
+        }
+    }
+
+    // function myFunction() {
+    //     // const inpObj = document.getElementById("id1");
+    //     // if (!inpObj.checkValidity()) {
+    //     //     document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    //     // }
+    //     let text = "Value Ok";
+    //     if (document.getElementById("id1").validity.rangeUnderflow) {
+    //         text = "Value too small";
+    //     }
+    //     document.getElementById("demo").innerHTML = text;
+    // }
+
+    // localStorage.setItem("name", "John Doe");
+    // document.getElementById("demo").innerHTML = localStorage.getItem("name");
+    // sessionStorage.setItem("name", "John Doe");
+    // document.getElementById("demo").innerHTML = sessionStorage.getItem("name");
+
+    // let w;
+    //
+    // function startWorker() {
+    //     if (typeof (w) == "undefined") {
+    //         w = new Worker("demo-workers.js");
+    //     }
+    //     w.onmessage = function(event) {
+    //         document.getElementById("result").innerHTML = event.data;
+    //     };
+    // }
+    //
+    // function stopWorker() {
+    //     w.terminate();
+    //     w = undefined;
+    // }
+
+    // getText("fetch-info.txt");
+    //
+    // async function getText(file) {
+    //     let myObject = await fetch(file);
+    //     let myText = await myObject.text()
+    //     document.getElementById("demo").innerHTML = myText;
+    // }
+</script>
+</body>
+</html>
