@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS JSON</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    // const myObj = {name: "John", age: 30, city: "New York"};
+    // myObj.name = "Gilbert";
+    // myObj["name"] = "Gilbert";
+    // const txt = '{"name":"John", "age":30, "city":"New York"}';
+    // const obj = JSON.parse(txt);
+    // const text = '["Ford", "BMW", "Audi", "Fist"]';
+    // const myArr = JSON.parse(text);
+    // const text = '{"name":"John", "birth":"1986-12-14", "city":"New York", "age":"function() {return 30;}"}';
+    // '{"name":"John", "age":"function() {return 30;}", "city":"New York"}'
+    // const obj = JSON.parse(text); //, function (key, value) {
+    // if (key === "birth") {
+    //     return new Date(value);
+    // } else {
+    //     return value;
+    // }
+    // });
+    // obj.birth = new Date(obj.birth);
+    // obj.age = eval("(" + obj.age + ")");
+    // const obj = {
+    //     name: "John"/*, age: 30*/, city: "New York", today: new Date(), age: function () {
+    //         return 30;
+    //     }
+    // };
+    // obj.age = obj.age.toString();
+    // const arr = ["John", "Peter", "Sally", "Jane"];
+    // const myJSON = JSON.stringify(obj);
+
+    // localStorage.setItem("testJSON", myJSON);
+    // let text = localStorage.getItem("testJSON");
+    // let myObj = JSON.parse(text);
+    // const myJSON = '{"name":"John", "age":30, "car":null}';
+    // const myObj = JSON.parse(myJSON);
+    //
+    // let text = "";
+    // for (const x in myObj) {
+    //     // text += x + ", ";
+    //     text += myObj[x] + ", ";
+    // }
+
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+    }
+    xmlhttp.open("GET", "php_demo.php");
+    xmlhttp.send();
+    // document.getElementById("demo").innerHTML =
+    //     text;
+    // obj;
+    // myJSON;
+    // obj.name + " " + obj.age();
+    // myArr;
+    // obj.name + " " + obj.age;
+    // myObj.name + " " + myObj["name"];
+</script>
+</body>
+</html>
