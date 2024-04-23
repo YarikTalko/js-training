@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Google Chart</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<div id="myChart" style="max-width: 700px; height: 400px;"></div>
+
+<script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        const data = google.visualization.arrayToDataTable([
+            // ["Country", "Mhl"],
+            // ["Italy", 55],
+            // ["France", 49],
+            // ["Spain", 44],
+            // ["USA", 24],
+            // ["Argentina", 15],
+            ["Price", "Size"],
+            [50, 7], [60, 8], [70, 8], [80, 9], [90, 9],
+            [100, 9], [110, 10], [120, 11],
+            [130, 14], [140, 14], [150, 15]
+        ]);
+
+        const options = {
+            // title: "World Wide Wine Production",
+            // is3D: true
+            title: "House prices vs. Size",
+            hAxis: {title: "Square Metters"},
+            vAxis: {title: "Price in Millions"},
+            legend: "none"
+        };
+
+        const chart = new google.visualization.ScatterChart/*LineChart/*PieChart/*BarChart*/(document.getElementById("myChart"));
+        chart.draw(data, options);
+    }
+</script>
+</body>
+</html>

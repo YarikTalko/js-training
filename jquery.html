@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="id01" class="intro">Hello</h1>
+<p id="demo">1</p>
+
+<script>
+    // $(document).ready(function() {
+    //     var myElements = $("#id01");
+    //     $("#demo").text("The text from the id01 paragraph is: " + myElements[0].innerHTML);
+    // });
+    // const myElements = document.getElementById("id01");
+    // document.getElementById("demo").innerHTML = myElements.innerHTML;
+    // $(document).ready(function() {
+    //     var myElements = $("p");
+    //     $("#demo").text("The text in the first paragraph is: " + myElements[0].innerHTML);
+    // });
+    // $(document).ready(function() {
+    //     var myElements = $(".intro");
+    //     $("#demo").text("the text is " + myElements[0].innerHTML);
+    // });
+    const myElement = document.getElementById("demo");
+    // const myText = document.getElementById("id01").textContent;
+    // const myText = document.getElementById("id01").innerHTML;
+    // myElement.textContent = myText;
+    // myElement.innerHTML = "<div>" + myText + "</div>";
+    // myElement.innerHTML = myText;
+    // myElement.style.display = "none";
+    // myElement.style.display = "";
+    // myElement.style.fontSize = "35px";
+    // myElement.remove();
+    myElement.innerHTML = document.getElementById("id01").parentNode.nodeName;
+</script>
+</body>
+</html>
